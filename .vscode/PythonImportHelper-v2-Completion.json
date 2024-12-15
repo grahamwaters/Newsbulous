@@ -1,0 +1,237 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "BackgroundScheduler",
+        "importPath": "apscheduler.schedulers.background",
+        "description": "apscheduler.schedulers.background",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.background",
+        "documentation": {}
+    },
+    {
+        "label": "BackgroundScheduler",
+        "importPath": "apscheduler.schedulers.background",
+        "description": "apscheduler.schedulers.background",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.background",
+        "documentation": {}
+    },
+    {
+        "label": "feedparser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "feedparser",
+        "description": "feedparser",
+        "detail": "feedparser",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "WordCloud",
+        "importPath": "wordcloud",
+        "description": "wordcloud",
+        "isExtraImport": true,
+        "detail": "wordcloud",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_headlines",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")\n        return\n    except json.JSONDecodeError as e:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "update_headlines",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def update_headlines():\n    fetch_headlines()\n@app.route('/')\ndef home():\n    return render_template('index.html')\n@app.route('/headlines')\ndef get_headlines():\n    return jsonify(HEADLINES)\nif __name__ == '__main__':\n    scheduler = BackgroundScheduler()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def home():\n    return render_template('index.html')\n@app.route('/headlines')\ndef get_headlines():\n    return jsonify(HEADLINES)\nif __name__ == '__main__':\n    scheduler = BackgroundScheduler()\n    scheduler.add_job(update_headlines, 'interval', hours=1)\n    scheduler.start()\n    # Fetch headlines at startup",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_headlines",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_headlines():\n    return jsonify(HEADLINES)\nif __name__ == '__main__':\n    scheduler = BackgroundScheduler()\n    scheduler.add_job(update_headlines, 'interval', hours=1)\n    scheduler.start()\n    # Fetch headlines at startup\n    update_headlines()\n    try:\n        app.run(debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\nHEADLINES = []\ndef fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "HEADLINES",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "HEADLINES = []\ndef fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")\n        return",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_directories",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def create_directories():\n    \"\"\"Creates necessary directories for the project.\"\"\"\n    os.makedirs('static', exist_ok=True)\n    os.makedirs('templates', exist_ok=True)  # Ensure the templates directory is created\ndef create_files():\n    \"\"\"Creates necessary files with initial content.\"\"\"\n    sources_content = {\n        \"CNN\": {\n            \"rss\": [\"http://rss.cnn.com/rss/cnn_latest.rss\",\n                    \"http://rss.cnn.com/rss/money_latest.rss\",",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "create_files",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def create_files():\n    \"\"\"Creates necessary files with initial content.\"\"\"\n    sources_content = {\n        \"CNN\": {\n            \"rss\": [\"http://rss.cnn.com/rss/cnn_latest.rss\",\n                    \"http://rss.cnn.com/rss/money_latest.rss\",\n                    \"http://rss.cnn.com/rss/edition_world.rss\",\n                    \"http://rss.cnn.com/rss/edition.xml\"]\n        },\n        \"CNBC\": {",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_news",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def fetch_news():\n    with open('sources.json', 'r') as file:\n        sources = json.load(file)\n    headlines = []\n    for source, details in sources.items():\n        for url in details['rss']:\n            feed = feedparser.parse(url)\n            headlines.extend(entry['title'] for entry in feed.entries)\n    return headlines\ndef generate_word_cloud(headlines):",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "generate_word_cloud",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def generate_word_cloud(headlines):\n    text = ' '.join(headlines)\n    wordcloud = WordCloud(width=800, height=400).generate(text)\n    wordcloud.to_file('static/wordcloud.png')\ndef update_news():\n    headlines = fetch_news()\n    generate_word_cloud(headlines)\n@app.route('/')\ndef home():\n    if not os.path.exists('static/wordcloud.png'):",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "update_news",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def update_news():\n    headlines = fetch_news()\n    generate_word_cloud(headlines)\n@app.route('/')\ndef home():\n    if not os.path.exists('static/wordcloud.png'):\n        update_news()\n    return render_template('index.html')\nif __name__ == '__main__':\n    scheduler = BackgroundScheduler()",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def home():\n    if not os.path.exists('static/wordcloud.png'):\n        update_news()\n    return render_template('index.html')\nif __name__ == '__main__':\n    scheduler = BackgroundScheduler()\n    scheduler.add_job(update_news, 'interval', hours=1)\n    scheduler.start()\n    app.run(debug=True)\n    \"\"\"",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "install_dependencies",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def install_dependencies():\n    \"\"\"Installs required Python packages.\"\"\"\n    subprocess.run(['pip', 'install', 'flask', 'feedparser', 'wordcloud', 'matplotlib', 'apscheduler'], check=True)\ndef main():\n    create_directories()\n    create_files()\n    install_dependencies()\n    subprocess.run(['python', 'app.py'])\nif __name__ == '__main__':\n    main()",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "def main():\n    create_directories()\n    create_files()\n    install_dependencies()\n    subprocess.run(['python', 'app.py'])\nif __name__ == '__main__':\n    main()",
+        "detail": "setup_and_run",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "setup_and_run",
+        "description": "setup_and_run",
+        "peekOfCode": "app = Flask(__name__)\ndef fetch_news():\n    with open('sources.json', 'r') as file:\n        sources = json.load(file)\n    headlines = []\n    for source, details in sources.items():\n        for url in details['rss']:\n            feed = feedparser.parse(url)\n            headlines.extend(entry['title'] for entry in feed.entries)\n    return headlines",
+        "detail": "setup_and_run",
+        "documentation": {}
+    }
+]
