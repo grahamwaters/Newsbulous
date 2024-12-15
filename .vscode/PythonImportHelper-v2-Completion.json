@@ -83,6 +83,14 @@
         "documentation": {}
     },
     {
+        "label": "SentimentIntensityAnalyzer",
+        "importPath": "vaderSentiment.vaderSentiment",
+        "description": "vaderSentiment.vaderSentiment",
+        "isExtraImport": true,
+        "detail": "vaderSentiment.vaderSentiment",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
@@ -104,7 +112,25 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")\n        return\n    except json.JSONDecodeError as e:",
+        "peekOfCode": "def fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    with open('sources.json', 'r') as f:\n        sources = json.load(f)\n    for source, details in sources.items():\n        for rss_url in details.get('rss', []):\n            try:\n                feed = feedparser.parse(rss_url)\n                for entry in feed.entries:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_sentiment",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def analyze_sentiment(text):\n    scores = analyzer.polarity_scores(text)\n    return scores['compound']  # Compound score ranges from -1 (negative) to +1 (positive)\ndef analyze_emotional_intensity(text):\n    intensity = 0\n    for buzzword, weight in BUZZWORDS.items():\n        if buzzword.lower() in text.lower():\n            intensity += weight\n    # Normalize intensity to a scale of 0 to 1\n    max_intensity = sum(BUZZWORDS.values())",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_emotional_intensity",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def analyze_emotional_intensity(text):\n    intensity = 0\n    for buzzword, weight in BUZZWORDS.items():\n        if buzzword.lower() in text.lower():\n            intensity += weight\n    # Normalize intensity to a scale of 0 to 1\n    max_intensity = sum(BUZZWORDS.values())\n    normalized_intensity = min(intensity / max_intensity, 1.0)\n    return normalized_intensity\ndef update_headlines():",
         "detail": "app",
         "documentation": {}
     },
@@ -140,7 +166,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\nHEADLINES = []\ndef fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")",
+        "peekOfCode": "app = Flask(__name__)\nHEADLINES = []\n# Initialize sentiment analyzer\nanalyzer = SentimentIntensityAnalyzer()\n# Define buzzwords and their associated weights for emotional intensity\nBUZZWORDS = {\n    \"Trump\": 2,\n    \"Biden\": 2,\n    \"Jews\": 3,\n    \"ISIS\": 3,",
         "detail": "app",
         "documentation": {}
     },
@@ -149,7 +175,25 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "HEADLINES = []\ndef fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    try:\n        with open('sources.json', 'r') as f:\n            sources = json.load(f)\n    except FileNotFoundError:\n        print(\"sources.json not found.\")\n        return",
+        "peekOfCode": "HEADLINES = []\n# Initialize sentiment analyzer\nanalyzer = SentimentIntensityAnalyzer()\n# Define buzzwords and their associated weights for emotional intensity\nBUZZWORDS = {\n    \"Trump\": 2,\n    \"Biden\": 2,\n    \"Jews\": 3,\n    \"ISIS\": 3,\n    \"terrorist\": 3,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "analyzer",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "analyzer = SentimentIntensityAnalyzer()\n# Define buzzwords and their associated weights for emotional intensity\nBUZZWORDS = {\n    \"Trump\": 2,\n    \"Biden\": 2,\n    \"Jews\": 3,\n    \"ISIS\": 3,\n    \"terrorist\": 3,\n    \"election\": 2,\n    \"immigration\": 2,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "BUZZWORDS",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "BUZZWORDS = {\n    \"Trump\": 2,\n    \"Biden\": 2,\n    \"Jews\": 3,\n    \"ISIS\": 3,\n    \"terrorist\": 3,\n    \"election\": 2,\n    \"immigration\": 2,\n    \"covid\": 1,\n    \"pandemic\": 1,",
         "detail": "app",
         "documentation": {}
     },
