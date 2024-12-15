@@ -1,0 +1,97 @@
+[Sat Dec 14 22:42:39 CST 2024] Backup of sources.json created at backup_sources/sources_backup_20241214_224239.json
+[Sat Dec 14 22:42:40 CST 2024] Removed feed: https://abcnews.go.com/abcnews/topstories from source: ABC News
+[Sat Dec 14 22:42:40 CST 2024] Removed feed: https://abcnews.go.com/abcnews/world from source: ABC News
+[Sat Dec 14 22:42:40 CST 2024] Removed feed: https://abcnews.go.com/abcnews/us from source: ABC News
+[Sat Dec 14 22:42:41 CST 2024] Removed feed: https://abcnews.go.com/abcnews/business from source: ABC News
+[Sat Dec 14 22:42:41 CST 2024] Removed feed: https://abcnews.go.com/abcnews/technology from source: ABC News
+[Sat Dec 14 22:42:41 CST 2024] Removed feed: https://abcnews.go.com/abcnews/entertainment from source: ABC News
+[Sat Dec 14 22:42:42 CST 2024] Removed feed: https://abcnews.go.com/abcnews/sports from source: ABC News
+[Sat Dec 14 22:42:42 CST 2024] Removed feed: https://abcnews.go.com/abcnews/opinion from source: ABC News
+[Sat Dec 14 22:42:42 CST 2024] Removed entire source: ABC News due to no valid feeds.
+[Sat Dec 14 22:42:42 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/rss.xml from source: BBC News
+[Sat Dec 14 22:42:42 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/world/rss.xml from source: BBC News
+[Sat Dec 14 22:42:42 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/business/rss.xml from source: BBC News
+[Sat Dec 14 22:42:43 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/technology/rss.xml from source: BBC News
+[Sat Dec 14 22:42:43 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/science_and_environment/rss.xml from source: BBC News
+[Sat Dec 14 22:42:43 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml from source: BBC News
+[Sat Dec 14 22:42:43 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/health/rss.xml from source: BBC News
+[Sat Dec 14 22:42:44 CST 2024] Removed feed: http://feeds.bbci.co.uk/news/politics/rss.xml from source: BBC News
+[Sat Dec 14 22:42:44 CST 2024] Removed entire source: BBC News due to no valid feeds.
+[Sat Dec 14 22:42:47 CST 2024] Removed feed: http://www.cnbc.com/id/20409666/device/rss/rss.html from source: CNBC
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/latest from source: Fox News
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/world from source: Fox News
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/politics from source: Fox News
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/business from source: Fox News
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/technology from source: Fox News
+[Sat Dec 14 22:42:49 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/entertainment from source: Fox News
+[Sat Dec 14 22:42:50 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/sports from source: Fox News
+[Sat Dec 14 22:42:50 CST 2024] Removed feed: http://feeds.foxnews.com/foxnews/opinion from source: Fox News
+[Sat Dec 14 22:42:50 CST 2024] Removed entire source: Fox News due to no valid feeds.
+[Sat Dec 14 22:42:50 CST 2024] Removed feed: https://www.hindustantimes.com/rss/topnews/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:50 CST 2024] Removed feed: https://www.hindustantimes.com/rss/world/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:50 CST 2024] Removed feed: https://www.hindustantimes.com/rss/india/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:51 CST 2024] Removed feed: https://www.hindustantimes.com/rss/business/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:51 CST 2024] Removed feed: https://www.hindustantimes.com/rss/tech/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:51 CST 2024] Removed feed: https://www.hindustantimes.com/rss/entertainment/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:51 CST 2024] Removed feed: https://www.hindustantimes.com/rss/sports/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:52 CST 2024] Removed feed: https://www.hindustantimes.com/rss/opinion/rssfeed.xml from source: Hindustan Times
+[Sat Dec 14 22:42:52 CST 2024] Removed entire source: Hindustan Times due to no valid feeds.
+[Sat Dec 14 22:42:52 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206573 from source: India Today
+[Sat Dec 14 22:42:54 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206581 from source: India Today
+[Sat Dec 14 22:42:55 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206582 from source: India Today
+[Sat Dec 14 22:42:55 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206583 from source: India Today
+[Sat Dec 14 22:42:56 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206584 from source: India Today
+[Sat Dec 14 22:42:57 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206585 from source: India Today
+[Sat Dec 14 22:42:58 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206586 from source: India Today
+[Sat Dec 14 22:42:59 CST 2024] Removed feed: https://www.indiatoday.in/rss/1206587 from source: India Today
+[Sat Dec 14 22:42:59 CST 2024] Removed entire source: India Today due to no valid feeds.
+[Sat Dec 14 22:42:59 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/news from source: NBC News
+[Sat Dec 14 22:42:59 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/world from source: NBC News
+[Sat Dec 14 22:43:00 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/us from source: NBC News
+[Sat Dec 14 22:43:00 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/business from source: NBC News
+[Sat Dec 14 22:43:00 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/technology from source: NBC News
+[Sat Dec 14 22:43:01 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/entertainment from source: NBC News
+[Sat Dec 14 22:43:01 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/sports from source: NBC News
+[Sat Dec 14 22:43:02 CST 2024] Removed feed: https://feeds.nbcnews.com/nbcnews/public/opinion from source: NBC News
+[Sat Dec 14 22:43:02 CST 2024] Removed entire source: NBC News due to no valid feeds.
+[Sat Dec 14 22:43:02 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-english from source: NDTV
+[Sat Dec 14 22:43:02 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-world from source: NDTV
+[Sat Dec 14 22:43:02 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-business from source: NDTV
+[Sat Dec 14 22:43:03 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-tech from source: NDTV
+[Sat Dec 14 22:43:03 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-education from source: NDTV
+[Sat Dec 14 22:43:03 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-sports from source: NDTV
+[Sat Dec 14 22:43:04 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-entertainment from source: NDTV
+[Sat Dec 14 22:43:04 CST 2024] Removed feed: https://feeds.feedburner.com/ndtvnews-opinion from source: NDTV
+[Sat Dec 14 22:43:04 CST 2024] Removed entire source: NDTV due to no valid feeds.
+[Sat Dec 14 22:43:04 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-News/ from source: The Globe and Mail
+[Sat Dec 14 22:43:04 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-World/ from source: The Globe and Mail
+[Sat Dec 14 22:43:05 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Canada/ from source: The Globe and Mail
+[Sat Dec 14 22:43:05 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Business/ from source: The Globe and Mail
+[Sat Dec 14 22:43:06 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Technology/ from source: The Globe and Mail
+[Sat Dec 14 22:43:06 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Entertainment/ from source: The Globe and Mail
+[Sat Dec 14 22:43:06 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Sports/ from source: The Globe and Mail
+[Sat Dec 14 22:43:07 CST 2024] Removed feed: https://www.theglobeandmail.com/rss/news/globeandmail-Opinion/ from source: The Globe and Mail
+[Sat Dec 14 22:43:07 CST 2024] Removed entire source: The Globe and Mail due to no valid feeds.
+[Sat Dec 14 22:43:08 CST 2024] Removed feed: https://www.theguardian.com/business/rss from source: The Guardian
+[Sat Dec 14 22:43:08 CST 2024] Removed feed: https://www.theguardian.com/technology/rss from source: The Guardian
+[Sat Dec 14 22:43:08 CST 2024] Removed feed: https://www.theguardian.com/sport/rss from source: The Guardian
+[Sat Dec 14 22:43:09 CST 2024] Removed feed: https://www.theguardian.com/film/rss from source: The Guardian
+[Sat Dec 14 22:43:09 CST 2024] Removed feed: https://www.theguardian.com/lifeandstyle/rss from source: The Guardian
+[Sat Dec 14 22:43:09 CST 2024] Removed feed: https://www.theguardian.com/commentisfree/rss from source: The Guardian
+[Sat Dec 14 22:43:10 CST 2024] Removed feed: https://www.thehindu.com/news/business/?service=rss from source: The Hindu
+[Sat Dec 14 22:43:10 CST 2024] Removed feed: https://www.thehindu.com/news/science/?service=rss from source: The Hindu
+[Sat Dec 14 22:43:10 CST 2024] Removed feed: https://www.thehindu.com/news/technology/?service=rss from source: The Hindu
+[Sat Dec 14 22:43:11 CST 2024] Removed feed: https://www.thehindu.com/news/education/?service=rss from source: The Hindu
+[Sat Dec 14 22:43:11 CST 2024] Removed feed: https://www.thehindu.com/news/sports/?service=rss from source: The Hindu
+[Sat Dec 14 22:44:04 CST 2024] Removed feed: https://feeds.washingtonpost.com/rss/technology from source: The Washington Post
+[Sat Dec 14 22:44:32 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsTopStories from source: USA Today
+[Sat Dec 14 22:44:32 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsNational from source: USA Today
+[Sat Dec 14 22:44:32 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsWorld from source: USA Today
+[Sat Dec 14 22:44:32 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsBusiness from source: USA Today
+[Sat Dec 14 22:44:32 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsTechnology from source: USA Today
+[Sat Dec 14 22:44:33 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsEntertainment from source: USA Today
+[Sat Dec 14 22:44:33 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsSports from source: USA Today
+[Sat Dec 14 22:44:33 CST 2024] Removed feed: http://rssfeeds.usatoday.com/usatoday-NewsOpinion from source: USA Today
+[Sat Dec 14 22:44:33 CST 2024] Removed entire source: USA Today due to no valid feeds.
+[Sat Dec 14 22:45:07 CST 2024] Backup of sources.json created at backup_sources/sources_backup_20241214_224507.json
+[Sat Dec 14 22:47:49 CST 2024] Backup of sources.json created at backup_sources/sources_backup_20241214_224749.json

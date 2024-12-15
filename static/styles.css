@@ -7,6 +7,65 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Effects */
+
+body.sunny {
+    background: linear-gradient(to bottom, #ffefd5, #ffec8b, #fffacd);
+}
+
+body.rainstorm {
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7, #ecf0f1);
+    animation: thunder 1s infinite;
+}
+
+@keyframes thunder {
+    0% { background: linear-gradient(to bottom, #2c3e50, #bdc3c7, #ecf0f1); }
+    50% { background: linear-gradient(to bottom, #1c2833, #7f8c8d, #bdc3c7); }
+    100% { background: linear-gradient(to bottom, #2c3e50, #bdc3c7, #ecf0f1); }
+}
+
+/* Lightning */
+body.rainstorm::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    background: white;
+    opacity: 0;
+    animation: lightning 1.5s infinite;
+}
+
+@keyframes lightning {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 0; }
+    70% { opacity: 0; }
+    80% { opacity: 1; }
+    90% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Sunny */
+body.sunny::after {
+    content: '☀️';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .cloud-container {
@@ -34,4 +93,33 @@ body {
     10% { opacity: 1; }
     90% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+/* Sentiment Indicator */
+
+.sentiment-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: background-color 0.5s ease;
+}
+
+/* Sentiment Colors */
+.sentiment-positive {
+    background-color: darkblue;
+}
+
+.sentiment-negative {
+    background-color: darkred;
+}
+
+.sentiment-neutral {
+    background-color: gray;
 }

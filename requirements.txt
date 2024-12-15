@@ -4,3 +4,5 @@ feedparser==6.0.10
 colorama==0.4.6
 emoji==2.3.0
 vaderSentiment==3.3.2
+nltk
+tqdm
