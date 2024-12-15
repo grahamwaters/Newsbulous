@@ -4,47 +4,39 @@
 
 # Exit immediately if a command exits with a non-zero status
 set -e
-brew install emoji colorama
-# Function to print messages with emojis using Python
+
+# Function to print messages
 function print_message() {
-    python3.12 - <<END
-import sys
-import emoji
-
-message = "${1}"
-emoji_message = emoji.emojize(message)
-
-print(emoji_message)
-END
+    echo "${1}"
 }
 
 # Start of the setup script
-print_message "🚀 Welcome to the Newsbulous Setup!" ":rocket:"
-print_message "🔧 Initializing environment setup..." ":wrench:"
+print_message "🚀 Welcome to the Newsbulous Setup!"
+print_message "🔧 Initializing environment setup..."
 
 # Step 1: Create Python virtual environment using Python 3.12
-print_message "🛠️ Creating Python virtual environment with Python 3.12..." ":hammer_and_wrench:"
+print_message "🛠️ Creating Python virtual environment with Python 3.12..."
 python3.12 -m venv venv
 
 # Step 2: Activate the virtual environment
-print_message "🔄 Activating virtual environment..." ":arrows_counterclockwise:"
+print_message "🔄 Activating virtual environment..."
 source venv/bin/activate
 
 # Step 3: Upgrade pip
-print_message "⬆️ Upgrading pip..." ":arrow_up:"
+print_message "⬆️ Upgrading pip..."
 pip install --upgrade pip
 
 # Step 4: Install dependencies from requirements.txt
-print_message "📦 Installing project dependencies..." ":package:"
+print_message "📦 Installing project dependencies..."
 pip install -r requirements.txt
 
 # Step 5: Create necessary directories if they don't exist
-print_message "📁 Creating directories..." ":file_folder:"
+print_message "📁 Creating directories..."
 mkdir -p templates static
 
 # Step 6: Create sources.json with provided content if it doesn't exist
 if [ ! -f "sources.json" ]; then
-    print_message "📰 Setting up sources.json..." ":newspaper:"
+    print_message "📰 Setting up sources.json..."
     cat <<EOL > sources.json
 {
     "CNN": {
@@ -72,16 +64,209 @@ if [ ! -f "sources.json" ]; then
             "https://www1.cbn.com/rss-cbn-articles-cbnnews.xml",
             "https://www1.cbn.com/rss-cbn-news-finance.xml"
         ]
+    },
+    "BBC News": {
+        "rss": [
+            "http://feeds.bbci.co.uk/news/rss.xml",
+            "http://feeds.bbci.co.uk/news/world/rss.xml",
+            "http://feeds.bbci.co.uk/news/business/rss.xml",
+            "http://feeds.bbci.co.uk/news/technology/rss.xml",
+            "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+            "http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+            "http://feeds.bbci.co.uk/news/health/rss.xml",
+            "http://feeds.bbci.co.uk/news/politics/rss.xml"
+        ]
+    },
+    "The Guardian": {
+        "rss": [
+            "https://www.theguardian.com/world/rss",
+            "https://www.theguardian.com/uk/rss",
+            "https://www.theguardian.com/business/rss",
+            "https://www.theguardian.com/technology/rss",
+            "https://www.theguardian.com/sport/rss",
+            "https://www.theguardian.com/film/rss",
+            "https://www.theguardian.com/lifeandstyle/rss",
+            "https://www.theguardian.com/commentisfree/rss"
+        ]
+    },
+    "The New York Times": {
+        "rss": [
+            "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Opinion.xml"
+        ]
+    },
+    "The Washington Post": {
+        "rss": [
+            "https://feeds.washingtonpost.com/rss/world",
+            "https://feeds.washingtonpost.com/rss/national",
+            "https://feeds.washingtonpost.com/rss/business",
+            "https://feeds.washingtonpost.com/rss/politics",
+            "https://feeds.washingtonpost.com/rss/technology",
+            "https://feeds.washingtonpost.com/rss/sports",
+            "https://feeds.washingtonpost.com/rss/entertainment",
+            "https://feeds.washingtonpost.com/rss/opinions"
+        ]
+    },
+    "Fox News": {
+        "rss": [
+            "http://feeds.foxnews.com/foxnews/latest",
+            "http://feeds.foxnews.com/foxnews/world",
+            "http://feeds.foxnews.com/foxnews/politics",
+            "http://feeds.foxnews.com/foxnews/business",
+            "http://feeds.foxnews.com/foxnews/technology",
+            "http://feeds.foxnews.com/foxnews/entertainment",
+            "http://feeds.foxnews.com/foxnews/sports",
+            "http://feeds.foxnews.com/foxnews/opinion"
+        ]
+    },
+    "ABC News": {
+        "rss": [
+            "https://abcnews.go.com/abcnews/topstories",
+            "https://abcnews.go.com/abcnews/world",
+            "https://abcnews.go.com/abcnews/us",
+            "https://abcnews.go.com/abcnews/business",
+            "https://abcnews.go.com/abcnews/technology",
+            "https://abcnews.go.com/abcnews/entertainment",
+            "https://abcnews.go.com/abcnews/sports",
+            "https://abcnews.go.com/abcnews/opinion"
+        ]
+    },
+    "CBS News": {
+        "rss": [
+            "https://www.cbsnews.com/latest/rss/main",
+            "https://www.cbsnews.com/latest/rss/world",
+            "https://www.cbsnews.com/latest/rss/national",
+            "https://www.cbsnews.com/latest/rss/business",
+            "https://www.cbsnews.com/latest/rss/technology",
+            "https://www.cbsnews.com/latest/rss/entertainment",
+            "https://www.cbsnews.com/latest/rss/sports",
+            "https://www.cbsnews.com/latest/rss/opinion"
+        ]
+    },
+    "NBC News": {
+        "rss": [
+            "https://feeds.nbcnews.com/nbcnews/public/news",
+            "https://feeds.nbcnews.com/nbcnews/public/world",
+            "https://feeds.nbcnews.com/nbcnews/public/us",
+            "https://feeds.nbcnews.com/nbcnews/public/business",
+            "https://feeds.nbcnews.com/nbcnews/public/technology",
+            "https://feeds.nbcnews.com/nbcnews/public/entertainment",
+            "https://feeds.nbcnews.com/nbcnews/public/sports",
+            "https://feeds.nbcnews.com/nbcnews/public/opinion"
+        ]
+    },
+    "USA Today": {
+        "rss": [
+            "http://rssfeeds.usatoday.com/usatoday-NewsTopStories",
+            "http://rssfeeds.usatoday.com/usatoday-NewsNational",
+            "http://rssfeeds.usatoday.com/usatoday-NewsWorld",
+            "http://rssfeeds.usatoday.com/usatoday-NewsBusiness",
+            "http://rssfeeds.usatoday.com/usatoday-NewsTechnology",
+            "http://rssfeeds.usatoday.com/usatoday-NewsEntertainment",
+            "http://rssfeeds.usatoday.com/usatoday-NewsSports",
+            "http://rssfeeds.usatoday.com/usatoday-NewsOpinion"
+        ]
+    },
+    "CBC News": {
+        "rss": [
+            "https://www.cbc.ca/cmlink/rss-topstories",
+            "https://www.cbc.ca/cmlink/rss-world",
+            "https://www.cbc.ca/cmlink/rss-national",
+            "https://www.cbc.ca/cmlink/rss-business",
+            "https://www.cbc.ca/cmlink/rss-technology",
+            "https://www.cbc.ca/cmlink/rss-entertainment",
+            "https://www.cbc.ca/cmlink/rss-sports",
+            "https://www.cbc.ca/cmlink/rss-opinion"
+        ]
+    },
+    "The Globe and Mail": {
+        "rss": [
+            "https://www.theglobeandmail.com/rss/news/globeandmail-News/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-World/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Canada/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Business/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Technology/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Entertainment/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Sports/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Opinion/"
+        ]
+    },
+    "The Times of India": {
+        "rss": [
+            "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/7119598.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/67149538.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/79425786.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms"
+        ]
+    },
+    "The Hindu": {
+        "rss": [
+            "https://www.thehindu.com/news/national/?service=rss",
+            "https://www.thehindu.com/news/international/?service=rss",
+            "https://www.thehindu.com/news/business/?service=rss",
+            "https://www.thehindu.com/news/science/?service=rss",
+            "https://www.thehindu.com/news/technology/?service=rss",
+            "https://www.thehindu.com/news/education/?service=rss",
+            "https://www.thehindu.com/news/sports/?service=rss",
+            "https://www.thehindu.com/opinion/?service=rss"
+        ]
+    },
+    "Hindustan Times": {
+        "rss": [
+            "https://www.hindustantimes.com/rss/topnews/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/world/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/india/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/business/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/tech/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/entertainment/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/sports/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/opinion/rssfeed.xml"
+        ]
+    },
+    "NDTV": {
+        "rss": [
+            "https://feeds.feedburner.com/ndtvnews-english",
+            "https://feeds.feedburner.com/ndtvnews-world",
+            "https://feeds.feedburner.com/ndtvnews-business",
+            "https://feeds.feedburner.com/ndtvnews-tech",
+            "https://feeds.feedburner.com/ndtvnews-education",
+            "https://feeds.feedburner.com/ndtvnews-sports",
+            "https://feeds.feedburner.com/ndtvnews-entertainment",
+            "https://feeds.feedburner.com/ndtvnews-opinion"
+        ]
+    },
+    "India Today": {
+        "rss": [
+            "https://www.indiatoday.in/rss/1206573",
+            "https://www.indiatoday.in/rss/1206581",
+            "https://www.indiatoday.in/rss/1206582",
+            "https://www.indiatoday.in/rss/1206583",
+            "https://www.indiatoday.in/rss/1206584",
+            "https://www.indiatoday.in/rss/1206585",
+            "https://www.indiatoday.in/rss/1206586",
+            "https://www.indiatoday.in/rss/1206587"
+        ]
     }
 }
+
 EOL
 else
-    print_message "📰 sources.json already exists. Skipping creation." ":newspaper:"
+    print_message "📰 sources.json already exists. Skipping creation."
 fi
 
 # Step 7: Create app.py if it doesn't exist
 if [ ! -f "app.py" ]; then
-    print_message "📄 Creating app.py..." ":page_facing_up:"
+    print_message "📄 Creating app.py..."
     cat <<EOL > app.py
 from flask import Flask, render_template, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -179,12 +364,12 @@ if __name__ == '__main__':
         scheduler.shutdown()
 EOL
 else
-    print_message "📄 app.py already exists. Skipping creation." ":page_facing_up:"
+    print_message "📄 app.py already exists. Skipping creation."
 fi
 
 # Step 8: Create index.html if it doesn't exist
 if [ ! -f "templates/index.html" ]; then
-    print_message "📄 Creating templates/index.html..." ":page_facing_up:"
+    print_message "📄 Creating templates/index.html..."
     cat <<EOL > templates/index.html
 <!DOCTYPE html>
 <html lang="en">
@@ -207,12 +392,12 @@ if [ ! -f "templates/index.html" ]; then
 </html>
 EOL
 else
-    print_message "📄 templates/index.html already exists. Skipping creation." ":page_facing_up:"
+    print_message "📄 templates/index.html already exists. Skipping creation."
 fi
 
 # Step 9: Create styles.css if it doesn't exist
 if [ ! -f "static/styles.css" ]; then
-    print_message "🎨 Creating static/styles.css..." ":artist_palette:"
+    print_message "🎨 Creating static/styles.css..."
     cat <<EOL > static/styles.css
 body {
     margin: 0;
@@ -341,12 +526,12 @@ body.sunny::after {
 }
 EOL
 else
-    print_message "🎨 static/styles.css already exists. Skipping creation." ":artist_palette:"
+    print_message "🎨 static/styles.css already exists. Skipping creation."
 fi
 
 # Step 10: Create scripts.js if it doesn't exist
 if [ ! -f "static/scripts.js" ]; then
-    print_message "💻 Creating static/scripts.js..." ":computer:"
+    print_message "💻 Creating static/scripts.js..."
     cat <<EOL > static/scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     const newsCloud = document.getElementById('newsCloud');
@@ -428,25 +613,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 EOL
 else
-    print_message "💻 static/scripts.js already exists. Skipping creation." ":computer:"
+    print_message "💻 static/scripts.js already exists. Skipping creation."
 fi
 
 # Step 11: Create requirements.txt if it doesn't exist
 if [ ! -f "requirements.txt" ]; then
-    print_message "📄 Creating requirements.txt..." ":page_facing_up:"
+    print_message "📄 Creating requirements.txt..."
     cat <<EOL > requirements.txt
 Flask==2.3.2
 APScheduler==3.10.4
 feedparser==6.0.10
-emoji==2.3.0
 vaderSentiment==3.3.2
 EOL
 else
-    print_message "📄 requirements.txt already exists. Skipping creation." ":page_facing_up:"
+    print_message "📄 requirements.txt already exists. Skipping creation."
 fi
 
 # Step 12: Final Message
-print_message "🎉 Setup complete! Launching Newsbulous..." ":tada:"
+print_message "🎉 Setup complete! Launching Newsbulous..."
 
 # Step 13: Run the Flask application using Python 3.12
 python3.12 app.py

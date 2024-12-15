@@ -24,5 +24,197 @@
             "https://www1.cbn.com/rss-cbn-articles-cbnnews.xml",
             "https://www1.cbn.com/rss-cbn-news-finance.xml"
         ]
+    },
+    "BBC News": {
+        "rss": [
+            "http://feeds.bbci.co.uk/news/rss.xml",
+            "http://feeds.bbci.co.uk/news/world/rss.xml",
+            "http://feeds.bbci.co.uk/news/business/rss.xml",
+            "http://feeds.bbci.co.uk/news/technology/rss.xml",
+            "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+            "http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+            "http://feeds.bbci.co.uk/news/health/rss.xml",
+            "http://feeds.bbci.co.uk/news/politics/rss.xml"
+        ]
+    },
+    "The Guardian": {
+        "rss": [
+            "https://www.theguardian.com/world/rss",
+            "https://www.theguardian.com/uk/rss",
+            "https://www.theguardian.com/business/rss",
+            "https://www.theguardian.com/technology/rss",
+            "https://www.theguardian.com/sport/rss",
+            "https://www.theguardian.com/film/rss",
+            "https://www.theguardian.com/lifeandstyle/rss",
+            "https://www.theguardian.com/commentisfree/rss"
+        ]
+    },
+    "The New York Times": {
+        "rss": [
+            "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml",
+            "https://rss.nytimes.com/services/xml/rss/nyt/Opinion.xml"
+        ]
+    },
+    "The Washington Post": {
+        "rss": [
+            "https://feeds.washingtonpost.com/rss/world",
+            "https://feeds.washingtonpost.com/rss/national",
+            "https://feeds.washingtonpost.com/rss/business",
+            "https://feeds.washingtonpost.com/rss/politics",
+            "https://feeds.washingtonpost.com/rss/technology",
+            "https://feeds.washingtonpost.com/rss/sports",
+            "https://feeds.washingtonpost.com/rss/entertainment",
+            "https://feeds.washingtonpost.com/rss/opinions"
+        ]
+    },
+    "Fox News": {
+        "rss": [
+            "http://feeds.foxnews.com/foxnews/latest",
+            "http://feeds.foxnews.com/foxnews/world",
+            "http://feeds.foxnews.com/foxnews/politics",
+            "http://feeds.foxnews.com/foxnews/business",
+            "http://feeds.foxnews.com/foxnews/technology",
+            "http://feeds.foxnews.com/foxnews/entertainment",
+            "http://feeds.foxnews.com/foxnews/sports",
+            "http://feeds.foxnews.com/foxnews/opinion"
+        ]
+    },
+    "ABC News": {
+        "rss": [
+            "https://abcnews.go.com/abcnews/topstories",
+            "https://abcnews.go.com/abcnews/world",
+            "https://abcnews.go.com/abcnews/us",
+            "https://abcnews.go.com/abcnews/business",
+            "https://abcnews.go.com/abcnews/technology",
+            "https://abcnews.go.com/abcnews/entertainment",
+            "https://abcnews.go.com/abcnews/sports",
+            "https://abcnews.go.com/abcnews/opinion"
+        ]
+    },
+    "CBS News": {
+        "rss": [
+            "https://www.cbsnews.com/latest/rss/main",
+            "https://www.cbsnews.com/latest/rss/world",
+            "https://www.cbsnews.com/latest/rss/national",
+            "https://www.cbsnews.com/latest/rss/business",
+            "https://www.cbsnews.com/latest/rss/technology",
+            "https://www.cbsnews.com/latest/rss/entertainment",
+            "https://www.cbsnews.com/latest/rss/sports",
+            "https://www.cbsnews.com/latest/rss/opinion"
+        ]
+    },
+    "NBC News": {
+        "rss": [
+            "https://feeds.nbcnews.com/nbcnews/public/news",
+            "https://feeds.nbcnews.com/nbcnews/public/world",
+            "https://feeds.nbcnews.com/nbcnews/public/us",
+            "https://feeds.nbcnews.com/nbcnews/public/business",
+            "https://feeds.nbcnews.com/nbcnews/public/technology",
+            "https://feeds.nbcnews.com/nbcnews/public/entertainment",
+            "https://feeds.nbcnews.com/nbcnews/public/sports",
+            "https://feeds.nbcnews.com/nbcnews/public/opinion"
+        ]
+    },
+    "USA Today": {
+        "rss": [
+            "http://rssfeeds.usatoday.com/usatoday-NewsTopStories",
+            "http://rssfeeds.usatoday.com/usatoday-NewsNational",
+            "http://rssfeeds.usatoday.com/usatoday-NewsWorld",
+            "http://rssfeeds.usatoday.com/usatoday-NewsBusiness",
+            "http://rssfeeds.usatoday.com/usatoday-NewsTechnology",
+            "http://rssfeeds.usatoday.com/usatoday-NewsEntertainment",
+            "http://rssfeeds.usatoday.com/usatoday-NewsSports",
+            "http://rssfeeds.usatoday.com/usatoday-NewsOpinion"
+        ]
+    },
+    "CBC News": {
+        "rss": [
+            "https://www.cbc.ca/cmlink/rss-topstories",
+            "https://www.cbc.ca/cmlink/rss-world",
+            "https://www.cbc.ca/cmlink/rss-national",
+            "https://www.cbc.ca/cmlink/rss-business",
+            "https://www.cbc.ca/cmlink/rss-technology",
+            "https://www.cbc.ca/cmlink/rss-entertainment",
+            "https://www.cbc.ca/cmlink/rss-sports",
+            "https://www.cbc.ca/cmlink/rss-opinion"
+        ]
+    },
+    "The Globe and Mail": {
+        "rss": [
+            "https://www.theglobeandmail.com/rss/news/globeandmail-News/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-World/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Canada/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Business/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Technology/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Entertainment/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Sports/",
+            "https://www.theglobeandmail.com/rss/news/globeandmail-Opinion/"
+        ]
+    },
+    "The Times of India": {
+        "rss": [
+            "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/7119598.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/67149538.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/79425786.cms",
+            "https://timesofindia.indiatimes.com/rssfeeds/4719148.cms"
+        ]
+    },
+    "The Hindu": {
+        "rss": [
+            "https://www.thehindu.com/news/national/?service=rss",
+            "https://www.thehindu.com/news/international/?service=rss",
+            "https://www.thehindu.com/news/business/?service=rss",
+            "https://www.thehindu.com/news/science/?service=rss",
+            "https://www.thehindu.com/news/technology/?service=rss",
+            "https://www.thehindu.com/news/education/?service=rss",
+            "https://www.thehindu.com/news/sports/?service=rss",
+            "https://www.thehindu.com/opinion/?service=rss"
+        ]
+    },
+    "Hindustan Times": {
+        "rss": [
+            "https://www.hindustantimes.com/rss/topnews/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/world/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/india/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/business/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/tech/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/entertainment/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/sports/rssfeed.xml",
+            "https://www.hindustantimes.com/rss/opinion/rssfeed.xml"
+        ]
+    },
+    "NDTV": {
+        "rss": [
+            "https://feeds.feedburner.com/ndtvnews-english",
+            "https://feeds.feedburner.com/ndtvnews-world",
+            "https://feeds.feedburner.com/ndtvnews-business",
+            "https://feeds.feedburner.com/ndtvnews-tech",
+            "https://feeds.feedburner.com/ndtvnews-education",
+            "https://feeds.feedburner.com/ndtvnews-sports",
+            "https://feeds.feedburner.com/ndtvnews-entertainment",
+            "https://feeds.feedburner.com/ndtvnews-opinion"
+        ]
+    },
+    "India Today": {
+        "rss": [
+            "https://www.indiatoday.in/rss/1206573",
+            "https://www.indiatoday.in/rss/1206581",
+            "https://www.indiatoday.in/rss/1206582",
+            "https://www.indiatoday.in/rss/1206583",
+            "https://www.indiatoday.in/rss/1206584",
+            "https://www.indiatoday.in/rss/1206585",
+            "https://www.indiatoday.in/rss/1206586",
+            "https://www.indiatoday.in/rss/1206587"
+        ]
     }
 }
