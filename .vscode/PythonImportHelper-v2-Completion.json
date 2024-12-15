@@ -91,6 +91,23 @@
         "documentation": {}
     },
     {
+        "label": "nltk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "nltk",
+        "description": "nltk",
+        "detail": "nltk",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
         "label": "subprocess",
         "kind": 6,
         "isExtraImport": true,
@@ -112,7 +129,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    with open('sources.json', 'r') as f:\n        sources = json.load(f)\n    for source, details in sources.items():\n        for rss_url in details.get('rss', []):\n            try:\n                feed = feedparser.parse(rss_url)\n                for entry in feed.entries:",
+        "peekOfCode": "def fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    with open('sources.json', 'r') as f:\n        sources = json.load(f)\n    for source, details in tqdm(sources.items()):\n        print(f'Source: {source}')\n        rss_details = details.get('rss', [])\n        for rss_url in tqdm(rss_details, total = len(rss_details)):\n            try:",
         "detail": "app",
         "documentation": {}
     },
@@ -194,6 +211,15 @@
         "importPath": "app",
         "description": "app",
         "peekOfCode": "BUZZWORDS = {\n    \"Trump\": 2,\n    \"Biden\": 2,\n    \"Jews\": 3,\n    \"ISIS\": 3,\n    \"terrorist\": 3,\n    \"election\": 2,\n    \"immigration\": 2,\n    \"covid\": 1,\n    \"pandemic\": 1,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "verbose",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "verbose = False #! Set to True to see titles.\ndef fetch_headlines():\n    global HEADLINES\n    HEADLINES = []\n    with open('sources.json', 'r') as f:\n        sources = json.load(f)\n    for source, details in tqdm(sources.items()):\n        print(f'Source: {source}')\n        rss_details = details.get('rss', [])\n        for rss_url in tqdm(rss_details, total = len(rss_details)):",
         "detail": "app",
         "documentation": {}
     },

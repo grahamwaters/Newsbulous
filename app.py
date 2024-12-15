@@ -4,6 +4,9 @@ import feedparser
 import json
 import os
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import nltk # we will use this for text analysis
+# import googletrans # we will use this for translation.
+from tqdm import tqdm
 
 app = Flask(__name__)
 
@@ -32,7 +35,7 @@ BUZZWORDS = {
     "rights": 2,
     # Add more buzzwords as needed
 }
-
+verbose = False #! Set to True to see titles.
 def fetch_headlines():
     global HEADLINES
     HEADLINES = []
@@ -40,13 +43,16 @@ def fetch_headlines():
     with open('sources.json', 'r') as f:
         sources = json.load(f)
 
-    for source, details in sources.items():
-        for rss_url in details.get('rss', []):
+    for source, details in tqdm(sources.items()):
+        print(f'Source: {source}')
+        rss_details = details.get('rss', [])
+        for rss_url in tqdm(rss_details, total = len(rss_details)):
             try:
                 feed = feedparser.parse(rss_url)
                 for entry in feed.entries:
                     if 'title' in entry:
                         headline = entry.title.strip()
+                        if verbose: print(f'scanning: {headline}')
                         sentiment = analyze_sentiment(headline)
                         emotional_intensity = analyze_emotional_intensity(headline)
                         HEADLINES.append({
@@ -54,6 +60,7 @@ def fetch_headlines():
                             'sentiment': sentiment,
                             'emotional_intensity': emotional_intensity
                         })
+                        #! note: implement further scanning of article text here.
             except Exception as e:
                 print(f"Error fetching from {rss_url}: {e}")
 

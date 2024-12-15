@@ -623,14 +623,27 @@ if [ ! -f "requirements.txt" ]; then
 Flask==2.3.2
 APScheduler==3.10.4
 feedparser==6.0.10
+colorama==0.4.6
+emoji==2.3.0
 vaderSentiment==3.3.2
+nltk
+tqdm
 EOL
 else
     print_message "📄 requirements.txt already exists. Skipping creation."
 fi
 
+# Step 11.b: Test sources.json
+print_message "checking sources.json for validity."
+chmod +x test_sources.sh
+# ./test_sources.sh #! uncomment this to clean the source documentation of bad sources.
+
+
 # Step 12: Final Message
 print_message "🎉 Setup complete! Launching Newsbulous..."
+
+
+
 
 # Step 13: Run the Flask application using Python 3.12
 python3.12 app.py
